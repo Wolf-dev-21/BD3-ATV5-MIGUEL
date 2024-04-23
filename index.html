@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE 5 </title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+    <body>
+    
+        <h1>Listagem de alunos</h1>
+
+                <div class="content">
+
+                <form action="" id="add-aluno-form">
+                    <input type="text" name="titulo" id="titulo" placeholder="Digite o título do livro: "/>
+
+                    <input type="text" name="autor" id="autor" placeholder="Digite o nome do autor do livro: "/>
+
+                    <button>Cadastrar</button>
+
+                </form>
+                <ul id="book-list"></ul>
+
+        </div>
+
+    </body>
+
+    <!-- IMPORT DO SDK DO FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+
+    <!-- IMPORT DO SDK DO FIRESTORE -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+
+    <script>
+        /* Dados de credenciais de acesso ao firebase */
+        const firebaseConfig = {
+            apiKey: "AIzaSyD196YZUF9yOAoVUQyzqMeGX0siFjG3F8M",
+            authDomain: "bd3-nosql-e5811.firebaseapp.com",
+            projectId: "bd3-nosql-e5811",
+            storageBucket: "bd3-nosql-e5811.appspot.com",
+            messagingSenderId: "843386584088",
+            appId: "1:843386584088:web:cae1042bc36250b7ac976d",
+            measurementId: "G-6JP0NR6SVF"
+        };
+
+        /* inicializa o firebase na aplicação web */
+        firebase.initializeApp(firebaseConfig);
+        console.log(firebase);
+
+        /* inicializar a conexão com o banco NOSQL FIRESTORE*/
+        const db = firebase.firestore();
+        console.log(db);
+
+        /* Teste da conexão com o FIRESTORE
+        console.log('Teste de conexão com o firestore');
+        console.log(db);*/
+
+    </script>
+
+    <script src="app.js"></script>
+
+</html>
